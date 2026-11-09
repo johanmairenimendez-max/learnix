@@ -62,7 +62,10 @@
     if (!p) return null;
 
     const photoSrc = p.photoUrl || initialsAvatar(p.name);
-    const titleName = p.title ? `${p.title} ${p.name}` : p.name;
+    const t = (p.title || '').trim();
+    const nm = (p.name || '').trim();
+    const cleanName = t && nm.toLowerCase().startsWith(t.toLowerCase()) ? nm.slice(t.length).trim() : nm;
+    const titleName = p.title ? `${p.title} ${cleanName}` : p.name;
     const yearsText = p.yearsExperience
       ? `${p.school} • ${p.yearsExperience} años de experiencia`
       : p.school;

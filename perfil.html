@@ -226,7 +226,7 @@ function showToast(message, type) {
 
   // Load current profile
   const profile = await db.getTeacherProfile();
-  fName.value = profile.name || '';
+  fName.value = (() => { const t = (profile.title || '').trim(), n = (profile.name || '').trim(); return t && n.toLowerCase().startsWith(t.toLowerCase()) ? n.slice(t.length).trim() : n; })();
   fTitle.value = profile.title || '';
   fRole.value = profile.role || '';
   fSpecialty.value = profile.specialty || '';
@@ -318,7 +318,7 @@ function showToast(message, type) {
   document.getElementById('btn-reset').addEventListener('click', async () => {
     if (!confirm('¿Restaurar los datos de ejemplo? Se perderán tus datos actuales.')) return;
     await db.updateTeacherProfile({
-      name: 'Lic. Johan Mendez',
+      name: 'Johan Mendez',
       title: 'Lic.',
       role: 'Docente de Tecnología Educativa',
       specialty: 'Tecnología Educativa',

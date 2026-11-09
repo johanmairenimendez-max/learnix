@@ -6,7 +6,7 @@
  * el almacenamiento local del navegador por llamadas a una API REST / Supabase.
  */
 
-const DB_NAME = 'LearnixDB';
+const DB_NAME = 'LearnixDB2';
 const DB_VERSION = 1;
 
 class StorageService {
@@ -93,139 +93,71 @@ class StorageService {
       const defaultArticles = [
         {
           id: 'art-ciclo-agua',
-          title: 'El ciclo del agua y su vital importancia para la vida',
-          summary: 'Una travesía pedagógica para comprender el viaje inagotable del recurso más preciado de nuestra isla y el planeta.',
-          subject: 'Ciencias Naturales',
-          grade: '5to Primaria',
+          title: 'Inteligencia artificial en el aula: guía práctica para docentes',
+          summary: 'Cómo usar la inteligencia artificial para planificar, evaluar y personalizar el aprendizaje, con criterio ético y ejemplos listos para aplicar mañana.',
+          subject: 'Tecnología Educativa',
+          grade: 'Todos los niveles',
           readTime: 8,
           status: 'published', // 'published', 'draft', 'scheduled'
-          coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Esquema y paisaje del ciclo hidrológico en la naturaleza',
+          coverImage: 'data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20750%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27b%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%230B1F5C%27%2F%3E%3Cstop%20offset%3D%27.55%27%20stop-color%3D%27%231D4ED8%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2338BDF8%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27n%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23fff%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%237DD3FC%27%2F%3E%3C%2FradialGradient%3E%3Cpattern%20id%3D%27g%27%20width%3D%2750%27%20height%3D%2750%27%20patternUnits%3D%27userSpaceOnUse%27%3E%3Cpath%20d%3D%27M50%200H0V50%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-opacity%3D%27.07%27%2F%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23b%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ccircle%20cx%3D%27980%27%20cy%3D%27140%27%20r%3D%27260%27%20fill%3D%27%2338BDF8%27%20opacity%3D%27.18%27%2F%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%27650%27%20r%3D%27220%27%20fill%3D%27%230B1F5C%27%20opacity%3D%27.35%27%2F%3E%3Cpath%20d%3D%27M60%20690H300L340%20650H520M60%20640H220L260%20600M1140%2090H940L900%20130H760M1140%20140H1000%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-opacity%3D%27.3%27%20stroke-width%3D%273%27%2F%3E%3Cpath%20d%3D%27M260%20210L470%20155M260%20210L470%20265M260%20210L470%20375M260%20210L470%20485M260%20210L470%20595M260%20320L470%20155M260%20320L470%20265M260%20320L470%20375M260%20320L470%20485M260%20320L470%20595M260%20430L470%20155M260%20430L470%20265M260%20430L470%20375M260%20430L470%20485M260%20430L470%20595M260%20540L470%20155M260%20540L470%20265M260%20540L470%20375M260%20540L470%20485M260%20540L470%20595M470%20155L680%20155M470%20155L680%20265M470%20155L680%20375M470%20155L680%20485M470%20155L680%20595M470%20265L680%20155M470%20265L680%20265M470%20265L680%20375M470%20265L680%20485M470%20265L680%20595M470%20375L680%20155M470%20375L680%20265M470%20375L680%20375M470%20375L680%20485M470%20375L680%20595M470%20485L680%20155M470%20485L680%20265M470%20485L680%20375M470%20485L680%20485M470%20485L680%20595M470%20595L680%20155M470%20595L680%20265M470%20595L680%20375M470%20595L680%20485M470%20595L680%20595M680%20155L890%20265M680%20155L890%20375M680%20155L890%20485M680%20265L890%20265M680%20265L890%20375M680%20265L890%20485M680%20375L890%20265M680%20375L890%20375M680%20375L890%20485M680%20485L890%20265M680%20485L890%20375M680%20485L890%20485M680%20595L890%20265M680%20595L890%20375M680%20595L890%20485%27%20stroke%3D%27%23fff%27%20stroke-opacity%3D%27.28%27%20stroke-width%3D%272%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27210%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27320%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27430%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27540%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27155%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27265%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27375%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27485%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27595%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27155%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27265%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27375%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27485%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27595%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27890%27%20cy%3D%27265%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27890%27%20cy%3D%27375%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27890%27%20cy%3D%27485%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3C%2Fsvg%3E',
+          coverAlt: 'Red neuronal luminosa sobre un fondo azul tecnológico que representa la inteligencia artificial en la educación',
           author: 'Lic. Johan Mendez',
           role: 'Docente de Tecnología Educativa',
           views: 2450,
           createdAt: new Date('2025-03-14T08:30:00Z').getTime(),
           content: `
-            <div style="background:linear-gradient(135deg,#e0f2fe,#f0fdf4);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #0284c7;">
-              <p style="margin:0 0 8px;font-weight:700;color:#0369a1;">📋 Ficha Curricular — Alineada al Currículo MINERD</p>
-              <p style="margin:4px 0;"><strong>Competencia fundamental:</strong> Científica y Tecnológica</p>
-              <p style="margin:4px 0;"><strong>Eje temático:</strong> La Tierra y el Universo — Ciclos naturales</p>
-              <p style="margin:4px 0;"><strong>Indicador de logro:</strong> Describe las fases del ciclo del agua y explica su importancia para los ecosistemas locales.</p>
-              <p style="margin:4px 0;"><strong>Grado:</strong> 5to Primaria &nbsp;|&nbsp; <strong>Duración:</strong> 3 sesiones de 45 min</p>
+            <div style="background:linear-gradient(135deg,#eff6ff,#e0f2fe);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #1D4ED8;">
+              <p style="margin:0 0 6px;font-weight:700;color:#1E3A8A;">Indicador de logro</p>
+              <p style="margin:0;">Utiliza herramientas de inteligencia artificial para apoyar la planificación y la evaluación, verificando siempre la información y protegiendo los datos del estudiantado.</p>
             </div>
 
-            <h2>1. ¿De dónde viene la lluvia que riega nuestros campos?</h2>
-            <p>Cada vez que observamos un aguacero vespertino sobre Santo Domingo, el verde valle del Cibao o las aguas cristalinas del río Yaque del Norte, estamos presenciando una obra maestra de la naturaleza que lleva miles de millones de años en marcha: <strong>el ciclo del agua</strong>.</p>
-            <p>Para los estudiantes de primaria en nuestra región insular, comprender este ciclo no es solo una lección de ciencias; es entender la columna vertebral de nuestra agricultura, nuestro clima templado por los alisios y el agua potable que llega a nuestros hogares y aulas escolares.</p>
+            <h2>1. ¿Qué es la IA y por qué importa en el aula?</h2>
+            <p>La inteligencia artificial generativa puede redactar, resumir, traducir y proponer ideas a partir de una instrucción escrita. No reemplaza al docente: <strong>amplía su tiempo y su creatividad</strong> para dedicarlo a lo que ninguna máquina hace, que es acompañar a cada estudiante.</p>
 
-            <blockquote style="border-left:4px solid #0284c7;padding:16px 20px;background:#f0f9ff;border-radius:0 8px 8px 0;margin:24px 0;">
-              <p style="font-style:italic;margin:0 0 8px;">«El agua que bebió un dinosaurio hace millones de años es exactamente la misma molécula que hoy acaricia las hojas de nuestros manglares dominicanos.»</p>
-              <cite style="color:#64748b;">— Principio de Conservación Hidrológica</cite>
-            </blockquote>
+            <h2>2. Cuatro usos prácticos para empezar</h2>
+            <ul>
+              <li><strong>Planificar:</strong> generar borradores de secuencias didácticas y adaptarlos a tu grupo.</li>
+              <li><strong>Personalizar:</strong> crear actividades de distinto nivel para un mismo contenido.</li>
+              <li><strong>Evaluar:</strong> proponer rúbricas, bancos de preguntas y retroalimentación inicial.</li>
+              <li><strong>Crear recursos:</strong> organizar glosarios, resúmenes, guiones y fichas de trabajo.</li>
+            </ul>
 
-            <h2>2. Las 4 fases clave del ciclo continuo</h2>
-            <p>El agua se transforma de líquido a gas y de gas a sólido en una danza ininterrumpida:</p>
+            <h2>3. Cómo escribir un buen prompt</h2>
             <ol>
-              <li><strong>Evaporación:</strong> El calor del sol calienta el agua superficial de los ríos, lagos y el inmenso mar Caribe, transformándola en vapor invisible que asciende a la atmósfera. En República Dominicana, con más de 1,600 km de costa, la evaporación es intensa todo el año.</li>
-              <li><strong>Condensación:</strong> Al enfriarse en las capas altas, el vapor de agua se agrupa en diminutas gotas formando las nubes y la neblina matutina que cubre nuestras cordilleras Central y Septentrional.</li>
-              <li><strong>Precipitación:</strong> Cuando las nubes se saturan, las gotas caen por gravedad en forma de lluvia, llovizna o, en el Pico Duarte, ocasionalmente granizo. Nuestro país recibe un promedio de 1,500 mm de lluvia al año.</li>
-              <li><strong>Recolección (Escorrentía e Infiltración):</strong> El agua alimenta los acuíferos subterráneos, fluye por las cuencas de los 20 ríos principales y desemboca de vuelta en el océano, reiniciando el ciclo.</li>
+              <li><strong>Rol:</strong> «Actúa como docente de Tecnología Educativa de 8vo grado».</li>
+              <li><strong>Contexto:</strong> tema, nivel, tiempo disponible y recursos del aula.</li>
+              <li><strong>Tarea concreta:</strong> «Diseña una actividad de 40 minutos con una rúbrica de 4 criterios».</li>
+              <li><strong>Formato:</strong> tabla, lista o texto breve.</li>
+              <li><strong>Iteración:</strong> pide mejoras hasta que el resultado sirva para tu clase.</li>
             </ol>
 
-            <div style="background:#ecfdf5;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #a7f3d0;">
-              <h4 style="margin:0 0 8px;color:#065f46;">🌿 ¿Sabías que...?</h4>
-              <p style="margin:0;">La Cordillera Central de la República Dominicana es conocida como la <em>«Madre de las Aguas»</em>. Allí nacen los ríos Yaque del Norte, Yaque del Sur, Artibonito y Yuna, que abastecen a más del 70% de la población dominicana.</p>
+            <div style="background:#f1f5f9;padding:16px 20px;border-radius:12px;margin:20px 0;border-left:4px solid #0284C7;">
+              <p style="font-style:italic;margin:0 0 8px;">«La IA propone; el docente decide.»</p>
+              <p style="margin:0;font-size:13px;">Revisa cada resultado antes de usarlo en clase.</p>
             </div>
 
-            <h2>3. Secuencia Didáctica: El Experimento de la Bolsa Viajera</h2>
-            <p>Esta actividad permite a los estudiantes <strong>observar las 4 fases del ciclo en tiempo real</strong> usando materiales de bajo costo disponibles en cualquier escuela dominicana.</p>
+            <h2>4. Uso ético y responsable</h2>
+            <ul>
+              <li>Verifica los datos y las fuentes: la IA puede equivocarse con total seguridad.</li>
+              <li>No compartas nombres, fotos ni datos personales de estudiantes.</li>
+              <li>Enseña a citar el apoyo de la IA y a distinguir el trabajo propio.</li>
+              <li>Evalúa el proceso de aprendizaje, no solo el producto final.</li>
+            </ul>
 
-            <div style="background:#fff;padding:20px;border-radius:10px;border:1px solid #e2e8f0;margin:16px 0;">
-              <h4 style="color:#1e40af;margin-top:0;">🧪 Materiales (por equipo de 4 estudiantes)</h4>
-              <ul>
-                <li>1 bolsa plástica tipo ziploc transparente</li>
-                <li>1 taza de agua</li>
-                <li>Colorante azul alimentario (2 gotas)</li>
-                <li>Cinta adhesiva fuerte</li>
-                <li>1 marcador permanente</li>
-              </ul>
+            <h2>5. Actividad para esta semana</h2>
+            <ol>
+              <li>Elige una clase que ya planificaste.</li>
+              <li>Pide a una herramienta de IA tres ideas para mejorar su inicio y su cierre.</li>
+              <li>Compara con tu plan, elige lo mejor y anota qué ajustaste.</li>
+              <li>Comparte tu experiencia en los comentarios.</li>
+            </ol>
 
-              <h4 style="color:#1e40af;">📝 Procedimiento (Sesión 1 — 45 min)</h4>
-              <ol>
-                <li>Verter el agua con colorante en la bolsa y sellarla herméticamente.</li>
-                <li>Con el marcador, dibujar un sol arriba, nubes en el medio y el mar abajo.</li>
-                <li>Pegar la bolsa en una ventana que reciba sol directo (orientación sur ideal).</li>
-                <li>Registrar en el cuaderno: hora, temperatura del aula, estado de la bolsa.</li>
-                <li><strong>Predicción:</strong> Cada equipo escribe qué cree que pasará en 2 horas.</li>
-              </ol>
-
-              <h4 style="color:#1e40af;">🔍 Observación (Sesión 2 — día siguiente, 45 min)</h4>
-              <ol>
-                <li>Observar las gotas formadas en la parte superior de la bolsa (condensación).</li>
-                <li>Dibujar en el cuaderno lo que ven y etiquetar cada fase.</li>
-                <li>Comparar con la predicción: ¿acertaron? ¿Qué los sorprendió?</li>
-                <li>Discusión guiada: ¿Qué pasaría si tapamos el sol? ¿Y si la bolsa estuviera abierta?</li>
-              </ol>
-            </div>
-
-            <h2>4. Actividad para la Familia</h2>
-            <div style="background:#fef3c7;padding:16px 20px;border-radius:10px;margin:16px 0;border:1px solid #fcd34d;">
-              <p style="margin:0 0 12px;font-weight:700;color:#92400e;">🏠 Misión en Casa (con un adulto acompañante)</p>
-              <ol style="margin:0;">
-                <li>Recorrer la casa identificando dónde se <em>usa</em> agua y dónde se <em>desperdicia</em>.</li>
-                <li>Llenar una tabla con 3 columnas: lugar, uso, cantidad estimada.</li>
-                <li>Proponer 3 acciones concretas para ahorrar agua en su hogar.</li>
-                <li>Opcional: Tomar una foto del grifo que más gotea y traerla al aula.</li>
-              </ol>
-            </div>
-
-            <h2>5. Síntesis y Compromiso Ciudadano</h2>
-            <p>El ciclo hidrológico no es estático; se ve directamente impactado por la deforestación de nuestras lomas, la contaminación por plásticos en cañadas y ríos, y el calentamiento global. Cada árbol que sembramos en nuestras escuelas es un regulador del ciclo; cada botella plástica que recogemos de un arroyo es una barrera menos para el flujo natural del agua.</p>
-
-            <div style="background:linear-gradient(135deg,#ede9fe,#e0f2fe);padding:20px;border-radius:10px;margin:24px 0;">
-              <h4 style="margin:0 0 12px;color:#5b21b6;">📊 Rúbrica de Evaluación Formativa</h4>
-              <table style="width:100%;border-collapse:collapse;font-size:14px;">
-                <thead>
-                  <tr style="background:#8b5cf6;color:#fff;">
-                    <th style="padding:8px;text-align:left;border-radius:6px 0 0 0;">Criterio</th>
-                    <th style="padding:8px;text-align:center;">Avanzado (4)</th>
-                    <th style="padding:8px;text-align:center;">Satisfactorio (3)</th>
-                    <th style="padding:8px;text-align:center;border-radius:0 6px 0 0;">En proceso (2)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="background:#f5f3ff;">
-                    <td style="padding:8px;font-weight:600;">Identifica las 4 fases</td>
-                    <td style="padding:8px;text-align:center;">Nombra y explica las 4 con ejemplos locales</td>
-                    <td style="padding:8px;text-align:center;">Nombra las 4 fases correctamente</td>
-                    <td style="padding:8px;text-align:center;">Identifica 2-3 fases</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:8px;font-weight:600;">Experimento</td>
-                    <td style="padding:8px;text-align:center;">Registra y explica relación causa-efecto</td>
-                    <td style="padding:8px;text-align:center;">Realiza el experimento y registra</td>
-                    <td style="padding:8px;text-align:center;">Realiza el experimento con ayuda</td>
-                  </tr>
-                  <tr style="background:#f5f3ff;">
-                    <td style="padding:8px;font-weight:600;">Compromiso ambiental</td>
-                    <td style="padding:8px;text-align:center;">Propone y ejecuta acciones en su entorno</td>
-                    <td style="padding:8px;text-align:center;">Propone acciones concretas</td>
-                    <td style="padding:8px;text-align:center;">Reconoce la importancia del cuidado</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div style="background:#f0f9ff;padding:16px 20px;border-radius:10px;margin:16px 0;border:1px solid #bae6fd;">
-              <p style="margin:0;font-weight:600;color:#0369a1;">📖 Referencias Curriculares</p>
-              <ul style="margin:8px 0 0;color:#334155;">
-                <li>Diseño Curricular Nivel Primario, MINERD (2014), Área Ciencias de la Naturaleza.</li>
-                <li>Ordenanza 02-2015, sobre el currículo revisado del Nivel Primario.</li>
-                <li>UNESCO (2023). Educación para el Desarrollo Sostenible — ODS 6: Agua limpia.</li>
-              </ul>
-            </div>
+            <h2>Referencias</h2>
+            <ul>
+              <li>UNESCO (2023). <em>Guía para el uso de la IA generativa en educación e investigación.</em></li>
+            </ul>
           `,
-          tags: ['Biodiversidad', 'MINERD', 'EducaciónAmbiental', 'Agua']
+          tags: ['IA', 'TecnologíaEducativa', 'Innovación', 'Prompts']
         },
         {
           id: 'art-fracciones-equiv',
@@ -343,13 +275,13 @@ class StorageService {
       const defaultMedia = [
         {
           id: 'media-esquema-ciclo',
-          title: 'Esquema ciclo del agua RD',
+          title: 'Infografía IA en el aula',
           category: 'infografias',
-          url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+          url: 'data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20750%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27b%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%230B1F5C%27%2F%3E%3Cstop%20offset%3D%27.55%27%20stop-color%3D%27%231D4ED8%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2338BDF8%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27n%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23fff%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%237DD3FC%27%2F%3E%3C%2FradialGradient%3E%3Cpattern%20id%3D%27g%27%20width%3D%2750%27%20height%3D%2750%27%20patternUnits%3D%27userSpaceOnUse%27%3E%3Cpath%20d%3D%27M50%200H0V50%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-opacity%3D%27.07%27%2F%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23b%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ccircle%20cx%3D%27980%27%20cy%3D%27140%27%20r%3D%27260%27%20fill%3D%27%2338BDF8%27%20opacity%3D%27.18%27%2F%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%27650%27%20r%3D%27220%27%20fill%3D%27%230B1F5C%27%20opacity%3D%27.35%27%2F%3E%3Cpath%20d%3D%27M60%20690H300L340%20650H520M60%20640H220L260%20600M1140%2090H940L900%20130H760M1140%20140H1000%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-opacity%3D%27.3%27%20stroke-width%3D%273%27%2F%3E%3Cpath%20d%3D%27M260%20210L470%20155M260%20210L470%20265M260%20210L470%20375M260%20210L470%20485M260%20210L470%20595M260%20320L470%20155M260%20320L470%20265M260%20320L470%20375M260%20320L470%20485M260%20320L470%20595M260%20430L470%20155M260%20430L470%20265M260%20430L470%20375M260%20430L470%20485M260%20430L470%20595M260%20540L470%20155M260%20540L470%20265M260%20540L470%20375M260%20540L470%20485M260%20540L470%20595M470%20155L680%20155M470%20155L680%20265M470%20155L680%20375M470%20155L680%20485M470%20155L680%20595M470%20265L680%20155M470%20265L680%20265M470%20265L680%20375M470%20265L680%20485M470%20265L680%20595M470%20375L680%20155M470%20375L680%20265M470%20375L680%20375M470%20375L680%20485M470%20375L680%20595M470%20485L680%20155M470%20485L680%20265M470%20485L680%20375M470%20485L680%20485M470%20485L680%20595M470%20595L680%20155M470%20595L680%20265M470%20595L680%20375M470%20595L680%20485M470%20595L680%20595M680%20155L890%20265M680%20155L890%20375M680%20155L890%20485M680%20265L890%20265M680%20265L890%20375M680%20265L890%20485M680%20375L890%20265M680%20375L890%20375M680%20375L890%20485M680%20485L890%20265M680%20485L890%20375M680%20485L890%20485M680%20595L890%20265M680%20595L890%20375M680%20595L890%20485%27%20stroke%3D%27%23fff%27%20stroke-opacity%3D%27.28%27%20stroke-width%3D%272%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27210%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27320%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27430%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27260%27%20cy%3D%27540%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27155%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27265%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27375%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27485%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27595%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27155%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27265%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27375%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27485%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27680%27%20cy%3D%27595%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27890%27%20cy%3D%27265%27%20r%3D%2722%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27890%27%20cy%3D%27375%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3Ccircle%20cx%3D%27890%27%20cy%3D%27485%27%20r%3D%2715%27%20fill%3D%27url%28%23n%29%27%2F%3E%3C%2Fsvg%3E',
           sizeKB: 420,
           dimensions: '1200x800',
-          altText: 'Diagrama del ciclo del agua en la Cordillera Central y costas dominicanas',
-          associatedArticle: 'El ciclo del agua y su importancia para la vida',
+          altText: 'Infografía de una red neuronal sobre la inteligencia artificial en el aula',
+          associatedArticle: 'Inteligencia artificial en el aula: guía práctica para docentes',
           createdAt: new Date('2024-10-14').getTime()
         },
         {
@@ -385,7 +317,7 @@ class StorageService {
       if (settingsCount === 0) {
         await this._putRaw('settings', {
           key: 'teacherProfile',
-          name: 'Lic. Johan Mendez',
+          name: 'Johan Mendez',
           title: 'Lic.',
           role: 'Docente de Tecnología Educativa',
           specialty: 'Tecnología Educativa',
